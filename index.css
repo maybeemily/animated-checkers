@@ -1,0 +1,47 @@
+table {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+td, tr {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+
+tr:nth-of-type(2n+1) td:nth-of-type(2n+1) {
+  background-color: black;
+  animation: 3s infinite alternate rainbow
+}
+
+tr:nth-of-type(2n) td:nth-of-type(2n){
+  background-color: blue;
+  animation: 3s infinite alternate spin
+}
+
+@keyframes rainbow {
+  0% {
+    background-color: #efc632;
+  }
+  25% {
+    background-color: #f7753d;
+  }
+  50% {
+    background-color: #f74c3d
+  }
+  100% {
+    background-color: #f2047b;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
